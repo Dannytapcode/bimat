@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lời Tỏ Tinh</title>
+    <link rel="stylesheet" href="love.css">
+    <script src="love.js"></script>
+</head>
+
+<body>
+    <div class="TieuDe">
+        <a class="Ten">Nguyễn Hồng.</a>
+        <a id="show-letters-btn">Click</a>
+    </div>
+    <audio id="click-sound" src="image/Download.mp3" preload="auto" style="display:none;"></audio>
+
+
+
+    <div id="overlay"></div>
+
+    <div id="letter-container">
+        <div class="Thu1">
+            <div class="Thu2">
+                <a>Gửi Cậu!</a>
+                <p>Tới thời gian thích hợp mình sẻ gửi cho cậu nọi dung của lá thư này.</p>
+                <i>Nguyễn Đình Kiệt</i>
+                
+            </div>
+            
+            </div>
+            <div class="mewmew1">
+                <img src="image/mewmew.gif" alt="">
+            </div>
+            <div class="mewmew2">
+                <img src="image/mewmew.gif" alt="">
+            </div>
+            <div class="mewmew3">
+                <img src="image/mewmew.gif" alt="">
+            </div>
+            <div class="mewmew4">
+                <img src="image/mewmew.gif" alt="">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('show-letters-btn').addEventListener('click', function () {
+            let lettersDropped = 0;
+            const totalLetters = 100000;
+            const lettersPerSecond = 5;
+
+            const dropLetters = () => {
+                if (lettersDropped >= totalLetters) return;
+
+                for (let i = 0; i < lettersPerSecond; i++) {
+                    if (lettersDropped >= totalLetters) break;
+
+                    let letter = document.createElement('div');
+                    letter.className = 'letter';
+
+                    let leftPosition = Math.floor(Math.random() * (window.innerWidth - 50));
+                    letter.style.left = leftPosition + 'px';
+
+                    // Xoay ngẫu nhiên
+                    let rotation = Math.floor(Math.random() * 360);
+                    letter.style.transform = `rotate(${rotation}deg)`;
+
+                    document.body.appendChild(letter);
+
+
+                    setTimeout(() => {
+                        letter.style.animation = `fall 5s linear forwards`;
+                    }, Math.random() * 1000);
+
+
+                    letter.addEventListener('click', function () {
+                        const audio = document.getElementById('click-sound');
+                        audio.play();
+                        document.getElementById('letter-container').classList.add('show');
+                        document.getElementById('overlay').classList.add('show');
+                        letter.remove(); // Bỏ thư khi nhấn vào
+                    });
+
+                    lettersDropped++;
+                }
+            };
+
+            // Rơi 5 thư mỗi giây cho đến khi đủ 100 thư
+            const interval = setInterval(() => {
+                dropLetters();
+                if (lettersDropped >= totalLetters) {
+                    clearInterval(interval);
+                }
+            }, 1000); // 1000 ms = 1 giây
+        });
+
+        // Ẩn lớp phủ và lá thư khi nhấn vào lớp phủ
+        document.getElementById('overlay').addEventListener('click', function () {
+            this.classList.remove('show');
+            document.getElementById('letter-container').classList.remove('show');
+        });
+
+    </script>
+</body>
+
+</html>

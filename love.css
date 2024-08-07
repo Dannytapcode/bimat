@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #fff; 
+    transition: background-color 0.5s ease;
+}
+
+.letter {
+    position: absolute;
+    width: 55px; 
+    height: 32px; 
+    background: url('image/letters.png') no-repeat center center; 
+    background-size: cover; 
+    top: -100px;
+    animation: none;
+    cursor: pointer; 
+    transform: rotate(0deg);
+    z-index: 1500;
+}
+
+@keyframes fall {
+    from {
+        top: -50px; 
+    }
+    to {
+        top: calc(100vh - 50px); 
+    }
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1600; 
+    display: none; 
+}
+
+#letter-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 2px solid #000;
+    z-index: 1700; 
+    display: none; 
+}
+
+#letter-container.show {
+    width: 70%;
+    height: 90%;
+    background-color: #fff;
+    display: block; 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(255, 218, 232);
+    border-radius: 10px;
+}
+
+#overlay.show {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.TieuDe
+{
+    width: 300px;
+    height: 200px;
+    background: rgb(255, 218, 232);
+    position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid;
+        border-radius: 5px;
+}
+#show-letters-btn
+{
+    width: 30%;
+    height: 10%;
+    background: rgb(255, 218, 232);
+    position: absolute;
+        left: 50%;
+        top: 90%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        border-radius: 7px;
+        animation-duration: 2s;
+        animation-name: bounceIn;
+        box-shadow: 
+        4px 4px 8px rgba(0, 0, 0, 0.3), 
+        -4px -4px 8px rgba(255, 255, 255, 0.5);
+}
+
+.Ten
+{
+    width: 80%;
+    height: 10%;
+    background-color: white;
+    left: 50%;
+    top: 75%;
+    font-size: 15px;
+    padding: 2px;
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%, -50%);    
+    border-radius: 5px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(17) 1,caret 0.5s steps(2) infinite;
+    font-weight: bold;
+
+}
+@keyframes typing
+{
+    from {
+        width: 0;
+    }to{
+        width: 80%;
+    }
+}
+.Thu1
+{
+    width: 90%;
+    height: 85%;
+    background-color:rgba(255, 255, 255, 0);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 7px;
+    border: 3px dashed #ff8400 ;
+}
+.Thu2
+{
+    width: 100%;
+    height:100%;
+    padding: 10px;
+    text-align: center;
+    
+}
+.Thu2 a
+{
+    font-size: 200%;
+}
+.Thu2 p
+{
+    font-size: 150%;
+}
+.Thu2 i
+{
+    width: 100px;
+    position: absolute;
+    background-color: #00000000;
+    left: 90%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+}
+.mewmew1, .mewmew2,.mewmew3, .mewmew4{
+    position: absolute;
+    width: 90px;
+}
+.mewmew1{
+    bottom: 0;
+    left: 0;
+}
+.mewmew2{
+    bottom: 0;
+    right: 0;
+}
+.mewmew3{
+    top: 0;
+    right: 0;
+}
+.mewmew4{
+    left: 0;
+    top: 0;
+}
+.mewmew1 img, .mewmew2 img,.mewmew3 img, .mewmew4 img{
+    width: 100%;
+}

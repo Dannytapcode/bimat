@@ -162,11 +162,11 @@ body {
 }
 .typing-container {
     overflow: hidden; 
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding: 10px;
     text-align: center;
-    font-size: 100%;
+    font-size: 30px;
   }
   
   @keyframes blink {

@@ -11,7 +11,8 @@
 
 <body>
     <div class="TieuDe">
-        <a class="Ten">Thùy trang.</a>
+        <img src="image/450172646_782617940624414_8603740948900373576_n.jpg" alt="" class="Anh">
+        <a class="Ten">Nguyễn Hồng.</a>
         <a id="show-letters-btn">Click</a>
     </div>
     <audio id="click-sound" src="image/Download.mp3" preload="auto" style="display:none;"></audio>
@@ -22,16 +23,13 @@
 
     <div id="letter-container">
         <div class="Thu1">
-            <div class="Thu2">
-                <a>Gửi Cậu!</a>
-                <p>Sau một khoảng thời gian nhắn tin và chia sẻ cùng nhau, mình cảm thấy thật may mắn khi có cậu trong cuộc sống. Đã có lúc mình nghĩ rằng nên dừng lại, nhưng chính sự hiện diện và tình cảm của cậu đã khiến mình nhận ra rằng không thể thiếu cậu.<br>
-
-                    Mình đã và đang thay đổi bản thân mỗi ngày vì cậu. Tình cảm của mình dành cho cậu không chỉ là những lời nói, mà còn là những hành động, những nỗ lực để trở thành một người tốt hơn. Mình muốn được cùng cậu chia sẻ những niềm vui, nỗi buồn và cả những ước mơ trong tương lai.
-                    <br>
-                    Thùy trang, mình thật sự yêu cậu và mong muốn chúng ta có thể tiến xa hơn trên con đường này. Cậu có đồng ý cùng mình bước tiếp không?</p>
-                <i>Giấu tên</i>
-                
-            </div>
+            <div class="typing-container">
+                <h3>Gửi cậu!</h3>
+                <div id="typing-text"></div>
+                <i>Nguyên Đình Kiệt</i>
+                <div class="mewmew2">
+                    <img src="image/heartAnimation copy.gif" alt="">
+              </div>
             
             </div>
             <div class="mewmew1">
@@ -104,7 +102,6 @@
             this.classList.remove('show');
             document.getElementById('letter-container').classList.remove('show');
         });
-
     </script>
 </body>
 

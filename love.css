@@ -160,23 +160,25 @@ body {
     text-align: center;
     
 }
-.Thu2 a
-{
-    font-size: 200%;
-}
-.Thu2 p
-{
-    font-size: 150%;
-}
-.Thu2 i
-{
-    width: 100px;
-    position: absolute;
-    background-color: #00000000;
-    left: 90%;
-    top: 90%;
-    transform: translate(-50%, -50%);
-}
+.typing-container {
+    overflow: hidden; 
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 100%;
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  .typing-container {
+    animation: blink 0.7s infinite step-end alternate;
+  }
+  
 .mewmew1, .mewmew2,.mewmew3, .mewmew4{
     position: absolute;
     width: 90px;
@@ -199,4 +201,19 @@ body {
 }
 .mewmew1 img, .mewmew2 img,.mewmew3 img, .mewmew4 img{
     width: 100%;
+}
+.Anh
+{
+    width: 40%;
+    position: absolute;
+    left: 50%;
+    top:35%;
+    transform: translate(-50%, -50%);
+}
+.typing-container i
+{
+    position: absolute;
+    width: 20%;
+    bottom: 0;
+    right: 0;
 }
